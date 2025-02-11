@@ -14,7 +14,10 @@ A Flutter package that provides a custom page transition with an animated ball e
 ### Demo Video
 
 ![Demo](https://raw.githubusercontent.com/MOELSHAFEY/ball_transition/refs/heads/main/demo.gif)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7dd9e856c4c0d92371329817f746eb4378be06c8
 
 
 ## Getting Started
