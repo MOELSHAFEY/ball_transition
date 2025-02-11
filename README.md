@@ -14,7 +14,7 @@ A Flutter package that provides a custom page transition with an animated ball e
 ### Demo Video
 
 <video width="600" controls>
-  <source src="[https://github.com/MOELSHAFEY/ball_transition/blob/main/demo.mp4](https://github.com/MOELSHAFEY/ball_transition/blob/main/demo.gif)" type="video/mp4">
+  <source src="https://github.com/MOELSHAFEY/ball_transition/blob/main/demo.gif" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
