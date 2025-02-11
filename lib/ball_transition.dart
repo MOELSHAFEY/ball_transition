@@ -47,24 +47,28 @@ Route createBallTransitionRoute({
               tween: Tween<double>(begin: 0, end: 0),
               weight: 0.1,
             ),
+            TweenSequenceItem(
+              tween: Tween<double>(begin: 0, end: 0),
+              weight: 0.1,
+            ),
           ]).animate(animation).value;
 
           double sizeFactor = TweenSequence([
             TweenSequenceItem(
               tween: Tween<double>(begin: 50, end: 50),
-              weight: 0.3,
+              weight: 0.4,
             ),
             TweenSequenceItem(
               tween: Tween<double>(begin: 50, end: 200),
-              weight: 0.07,
+              weight: 0.04,
             ),
             TweenSequenceItem(
               tween: Tween<double>(begin: 200, end: 500),
-              weight: 0.08,
+              weight: 0.04,
             ),
             TweenSequenceItem(
               tween: Tween<double>(begin: 500, end: 1000),
-              weight: 0.08,
+              weight: 0.04,
             ),
           ]).animate(animation).value;
 
@@ -99,17 +103,28 @@ Route createBallTransitionRoute({
                   ),
                 ),
               ),
-              SlideTransition(
-                position: Tween<Offset>(
-                  begin: const Offset(0, 1.0), // Start from bottom
-                  end: Offset.zero,
+              FadeTransition(
+                opacity: Tween(
+                  begin: 0.0,
+                  end: 1.0,
                 ).animate(
                   CurvedAnimation(
                     parent: animation,
-                    curve: const Interval(0.9, 1.0, curve: Curves.easeOut),
+                    curve: const Interval(0.8, 1.0, curve: Curves.easeOut),
                   ),
                 ),
-                child: child!,
+                child: SlideTransition(
+                  position: Tween<Offset>(
+                    begin: const Offset(0, 1),
+                    end: Offset.zero,
+                  ).animate(
+                    CurvedAnimation(
+                      parent: animation,
+                      curve: const Interval(0.1, 1.0, curve: Curves.easeOut),
+                    ),
+                  ),
+                  child: child!,
+                ),
               ),
             ],
           );

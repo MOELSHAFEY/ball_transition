@@ -12,9 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "ball transition",
+      title: "Ball Transition",
       theme: ThemeData(
         useMaterial3: true,
+        primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(),
     );
@@ -26,25 +27,34 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //by moelshafey
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Ball Transition Demo'),
+        title: const Text(
+          'Ball Transition Demo',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: const Color(0xFF2A9D8F),
       ),
       body: Center(
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+            textStyle: const TextStyle(fontSize: 18),
+          ),
           onPressed: () {
             Navigator.of(context).push(
               createBallTransitionRoute(
                 secondPage: const SecondPage(),
+                linearGradient_begin: Alignment.topLeft,
+                linearGradient_end: Alignment.bottomRight,
                 ballColorGradient: [
-                  Colors.red,
-                  Colors.orange
-                ], // يجب أن تحتوي على لونين على الأقل
-                backgroundColor:
-                    const Color.fromARGB(255, 246, 251, 253), //لون الخلفيه
-                transitionDuration:
-                    const Duration(milliseconds: 1500), // تخصيص زمن التنفيذ
+                  const Color(0xFF264653), 
+                  const Color(0xFF2A9D8F),
+                  const Color(0xFFE9C46A), 
+                ],
+                backgroundColor: const Color.fromARGB(
+                    255, 255, 251, 248),
+                transitionDuration: const Duration(milliseconds: 1200),
               ),
             );
           },
@@ -62,11 +72,22 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Second Page'),
+        title: const Text(
+          'Second Page',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: const Color(0xFF2A9D8F),
       ),
       body: const Center(
-        child: Text('Welcome to the second page by moelshafey'),
+        child: Text(
+          'Welcome to the second page',
+          textAlign: TextAlign.center,
+          style:
+              TextStyle(fontSize: 20, color: Color.fromARGB(255, 20, 19, 19)),
+        ),
       ),
+      backgroundColor: const Color.fromARGB(
+          255, 251, 255, 255),
     );
-  } //by moelshafey
+  }
 }
