@@ -11,6 +11,14 @@ A Flutter package that provides a custom page transition with an animated ball e
 - Flexible transition duration to control animation speed.
 - Customizable background color during the transition.
 
+### Demo Video
+
+<video width="600" controls>
+  <source src="" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 ## Getting Started
 
 To start using the package, simply follow these steps:

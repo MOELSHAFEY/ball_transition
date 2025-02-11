@@ -1,7 +1,8 @@
 name: ball_transition
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+version: 1.0.0
+description: A Flutter package providing smooth transition effects for interactive ball elements in animations.
+repository: https://github.com/MOELSHAFEY/ball_transition
+
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
